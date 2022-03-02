@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Erik Chan's Blog</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      coverpage: true,
+      auto2top: true,
+      executeScript: true,
+      relativePath: true,
+      loadNavbar: true,
+      loadSidebar: true,
+      mergeNavbar: true,
+      maxLevel: 6,
+      subMaxLevel: 2,
+      repo: 'https://github.com/ErikChanGit',
+      name: '<span><strong>Erik Chan,s Blog</strong></span>',
+      coverpage: ['/'],
+	  alias: {
+
+      },
+      search: {
+        placeholder: '搜索',
+        noData: '找不到结果!',
+        depth: 3
+      },
+      formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}',
+      search: {
+        noData: {
+          '/': '没有结果'
+        },
+        paths: 'auto',
+        placeholder: {
+          '/': '搜索'
+        }
+      },
+    }
+  </script>
+   <!--插入“gitalk评论”模块-->
+  <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
+  <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="js/md5.min.js"></script>
+  <script>
+	const gitalk = new Gitalk({
+		clientID: 'ea3e69f3964e5337255d',
+		clientSecret: '0c5da7e57bdcb6fc2c3cb2cfcdd2eddec5baf558',
+		repo:'https://github.com/ErikChanGit/ErikChan-Blog.git',
+		owner:'ErikChanGit',
+		admin: ['ErikChanGit'],
+		// facebook-like distraction free mode  
+		id: location.pathname,
+        distractionFreeMode: false
+    })
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="_scripts/docsify.min.js"></script>
+  <script src="_scripts/search.min.js"></script>
+  <script src="_scripts/emoji.min.js"></script>
+  <script src="_scripts/prism-c.min.js"></script>
+  <script src="_scripts/docsify-tabs.js"></script>
+  <script src="_scripts/docsify-sidebar-collapse.min.js"></script>
+  <script src="_scripts/docsify-scroll-to-top.min.js"></script>
+  <script src="_scripts/docsify-copy-code.js"></script>
+</body>
+</html>
