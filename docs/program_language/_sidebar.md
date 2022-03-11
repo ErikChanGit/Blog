@@ -1,5 +1,5 @@
 <!-- docs/_sidebar.md -->
-- **编程语言**
+- **语言与框架**
 
 - Java
   - [Java 版本介绍](/program_language/java/java_version.md)
@@ -10,9 +10,12 @@
   - [Python 总结](/program_language/python/python_summary.md)
 - TypeScript
   - [TypeScript 基础](/program_language/typescript/typescript.md)  
-
 - Nodejs
-
-- Vue.js
-
 - Rust
+- 框架
+  - [Vue](/program_language/framework/vue/vue.md)
+  - [Electron](/program_language/framework/electron/electron.md)
+  - [vscode](/program_language/framework/vscode/vscode.md)
+- 中间件
+  - [Redis](/program_language/middleware/redis.md)
+  - [RPC](/program_language/middleware/rpc.md)

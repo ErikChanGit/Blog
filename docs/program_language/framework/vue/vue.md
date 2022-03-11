@@ -1,9 +1,4 @@
-## 搞懂 Vuex
-
-
-
-
-
+# 搞懂 Vuex
 #### 生命周期
 
 - beforeCreate
