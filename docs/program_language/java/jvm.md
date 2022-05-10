@@ -10,13 +10,13 @@
 
 首先，Java 代码被编译成字节码，这个字节码在不同的机器上被解释，在主机系统和 Java 源代码之间，字节码是一种中介语言，Java 中的 JVM 负责分配内存空间。
 
-![image-20210705134354163](C:\Users\rt-thread\AppData\Roaming\Typora\typora-user-images\image-20210705134354163.png)
+![image-20210705134354163](../figures/jvm_1.png)
 
 #### JVM 架构
 
 了解 JVM 的架构。Java 中的 JVM 架构包含类加载器、内存区、执行引擎等。
 
-![image-20210705134447698](C:\Users\rt-thread\AppData\Roaming\Typora\typora-user-images\image-20210705134447698.png)
+![image-20210705134447698](../figures/jvm_2.png)
 
 **1) 类加载器**
 
@@ -74,27 +74,27 @@ PC 寄存器存储当前正在执行的 Java 虚拟机指令的地址。在 Java
 
 假设在 main 中，您调用了两个函数 f1 和 f2。main 函数存储在文件 a1.c 中。
 
-![image-20210705134517377](C:\Users\rt-thread\AppData\Roaming\Typora\typora-user-images\image-20210705134517377.png) 
+![image-20210705134517377](../figures/jvm_3.jpg) 
 
 函数 f1 存储在文件 a2.c 中
 
-![image-20210705134534238](C:\Users\rt-thread\AppData\Roaming\Typora\typora-user-images\image-20210705134534238.png) 
+![image-20210705134534238](../figures/jvm_4.jpg) 
 
 函数 f2 存储在文件 a3.c 中
 
-![image-20210705134543185](C:\Users\rt-thread\AppData\Roaming\Typora\typora-user-images\image-20210705134543185.png) 
+![image-20210705134543185](../figures/jvm_5.jpg) 
 
 所有这些文件，即 a1.c、a2.c 和 a3.c，都被提供给编译器。其输出是相应的目标文件，即机器代码。
 
-![image-20210705134554343](C:\Users\rt-thread\AppData\Roaming\Typora\typora-user-images\image-20210705134554343.png) 
+![image-20210705134554343](../figures/jvm_6.jpg) 
 
 下一步是在链接器的帮助下将所有这些目标文件集成到一个 .exe 文件中。链接器会将所有这些文件组合在一起并生成 .exe 文件。
 
-![image-20210705134607565](C:\Users\rt-thread\AppData\Roaming\Typora\typora-user-images\image-20210705134607565.png) 
+![image-20210705134607565](../figures/jvm_7.jpg) 
 
 在程序运行过程中，加载程序会将 a.exe 加载到 RAM 中执行。
 
-![image-20210705134622588](C:\Users\rt-thread\AppData\Roaming\Typora\typora-user-images\image-20210705134622588.png) 
+![image-20210705134622588](../figures/jvm_8.jpg) 
 
 ## **Java VM 中的 Java 代码编译和执行**
 
@@ -104,15 +104,15 @@ PC 寄存器存储当前正在执行的 Java 虚拟机指令的地址。在 Java
 - f1 作为 a2.java 存储在文件中
 - f2 作为 a3.java 存储在文件中
 
-![image-20210705134637250](C:\Users\rt-thread\AppData\Roaming\Typora\typora-user-images\image-20210705134637250.png) 
+![image-20210705134637250](../figures/jvm_9.jpg) 
 
 编译器将编译这三个文件，并生成 3 个对应的 .class 文件，其中包含字节码。与 C 不同，没有进行链接。Java VM 或 Java 虚拟机驻留在 RAM 上。在执行期间，使用类加载器将类文件带到 RAM 中。字节码已验证是否存在任何安全漏洞。
 
-![image-20210705134650669](C:\Users\rt-thread\AppData\Roaming\Typora\typora-user-images\image-20210705134650669.png) 
+![image-20210705134650669](../figures/jvm_10.jpg) 
 
 接下来，执行引擎会将字节码转换为本地机器码。这只是及时编译，这是Java相对较慢的主要原因之一。
 
-![image-20210705134700895](C:\Users\rt-thread\AppData\Roaming\Typora\typora-user-images\image-20210705134700895.png) 
+![image-20210705134700895](../figures/jvm_11.jpg) 
 
 **注意：JIT**或即时编译器是 Java 虚拟机 (JVM) 的一部分。它同时转化具有相似功能的部分字节码。
 
