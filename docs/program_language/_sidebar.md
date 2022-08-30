@@ -10,15 +10,20 @@
   - [原理](/program_language/javascript/conclusion.md)  
 - Python
   - [Python 高级用法](/program_language/python/python_advance.md)
+  - [文件操作 r+ 的问题](/program_language/python/python_r+.md)
   - [Python 总结](/program_language/python/python_summary.md)
 - TypeScript
   - [TypeScript 基础](/program_language/typescript/typescript.md)  
 - Nodejs
-- Rust
+  - [打包 node](/program_language/nodjs/pack_exe.md)
 - 框架
   - Vue
     - [Vuex](/program_language/framework/vue/vue.md)
     - [数据劫持](/program_language/framework/vue/data_steel.md)
+  - React
+    - [快速创建一个 React 项目](/program_language/framework/react/new_project.md)
+    - [国际化](/program_language/framework/react/language.md)
+    - [常见问题](/program_language/framework/react/problem.md)
   - [Electron](/program_language/framework/electron/electron.md)
   - vscode
     - [vscode 命令与路径](/program_language/framework/vscode/vscode.md)
